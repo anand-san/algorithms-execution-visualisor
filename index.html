@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <title>Algorithm Visualizations</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="topAlert" class="alert alert-warning alert-dismissible fade show" role="alert">
+        <span id="topAlertMessage">Welcome! Start the process by entering numbers in the input box</span>
+    </div>
+    <div id="settings" class="container">
+        <form>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <input id="arrayNumberInput" class="form-control" type="number"
+                        placeholder="Enter number here to add to the array">
+                    <small id="arrayNumberInputHelp" class="form-text text-muted">You'll see the visualization of these
+                        numbers below. Press Enter the add the number</small>
+                    <button type="submit" style="visibility: hidden" class="btn btn-primary"
+                        id="inputArraySubmitButton">Add</button>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <select id="sortingTypeSelect" class="custom-select" required>
+                        <option value="" selected diabled>Choose Sorting Type</option>
+                        <option value="bubble">Bubble Sort</option>
+                    </select>
+                    <small id="sortingTypeSelectHelp" class="form-text text-muted">Choose an Sorting Algorithm from
+                        here</small>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <button class="btn btn-primary" id="sortingButton" style="width: 100%">Sort</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <br>
+    <div id="VisualisationSection">
+        <div class="row">
+            <div id="algoVisualiserBarsOriginalArray" class="col-lg-6 col-md-6 col-sm-12">
+                <p>Array Elements</p>
+                <p id="algoVisualiserBarsOriginalArrayValue"></p>
+            </div>
+            <div id="algoVisualiserBars" class="col-lg-6 col-md-6 col-sm-12">
+                <p>Visualization</p>
+            </div>
+        </div>
+        <div class="row" style="margin-top:10px">
+            <div id="algoVisualiserBarsCode" style="display: none" class="col-lg-6 col-md-6 col-sm-12">
+                <p>Code Being Executed (JS)</p>
+                <code id="bubbleSortCode"
+                    style="display: none; text-align: left!important;overflow: scroll;height: 200px;">
+                        const BubbleSort = inputArr => {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span>let len = inputArr.length <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span id="bubbleSortCodeForLoop1">for (let i = 0; i < len; i++)</span> {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="bubbleSortCodeForLoop2">for (let j = 0; j < len; j++)</span> {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="bubbleSortCodeConditionCheck">if (inputArr[j] > inputArr[j+1])</span> {<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="bubbleSortCodeTempVarStore">let tmp = inputArr[j];</span><br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="bubbleSortCodeSwapVar1">inputArr[j] = inputArr[j+1];</span><br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="bubbleSortCodeSwapVar2">inputArr[j+1] = tmp;</span><br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="bubbleSortCodeConditionExit">}</span><br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="bubbleSortCodeForLoop2Exit">}</span><br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="bubbleSortCodeForLoop1Exit">}</span><br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                </code>
+            </div>
+            <div id="algoVisualiserBarsRuntime" style="display: none" class="col-lg-6 col-md-6 col-sm-12">
+                <p>Dry Run (Scrollable)</p>
+                <p id=algoVisualiserBarsRuntimeValue
+                    style="overflow: scroll;height: 200px; font-size: smaller; border-left:1px solid black; border-radius: 10px;">
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js" type="text/javascript"></script>
+</body>
+
+</html>

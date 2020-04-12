@@ -1,0 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito:300);
+body { 
+font-family: "Nunito", sans-serif; 
+font-size: 12px; 
+text-align: center!important;
+transition: 1s all;
+  }
+
+.progress{
+    background-color: #fff!important;
+    padding: 2px;
+}
+.selectedProgress {
+    background-color: coral!important;
+}
+#algoVisualiserBars {
+    /* transform: rotate(-90deg); */
+    /* width: 350px;
+    margin-top: 75px;
+    margin-bottom: 75px; */
+}
+#algoVisualiserBarsOriginalArray, #algoVisualiserBars, #algoVisualiserBarsCode, #algoVisualiserBarsRuntime {
+    padding-bottom: 30px;
+    border-bottom: 2px solid cadetblue;
+    border-radius: 40px
+}
